@@ -1,0 +1,64 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 109);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  height: 400px;
+  width: 400px;
+  background-color: brown;
+  margin: 10px 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item input {
+  width: 12px;
+}
+
+#submit {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: rgb(164, 171, 96);
+  color: aliceblue;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 1200px){
+  .board-container {
+    flex-direction: column;
+  }
+  .board {
+    height: 400px;
+    width: 90vw;
+    margin: 3px 0px;
+  }
+}
